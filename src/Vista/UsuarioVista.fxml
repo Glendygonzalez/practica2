@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="210.0" prefWidth="427.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controlador.UsuarioVistaControl">
+   <children>
+      <Label layoutX="23.0" layoutY="42.0" prefHeight="23.0" prefWidth="79.0" text="Usuario">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Usuario" layoutX="127.0" layoutY="41.0" prefHeight="17.0" prefWidth="249.0" />
+      <Label layoutX="23.0" layoutY="94.0" prefHeight="23.0" prefWidth="79.0" text="Contraseña" />
+      <TextField fx:id="Contraseña" layoutX="127.0" layoutY="97.0" prefHeight="23.0" prefWidth="249.0" />
+      <Button fx:id="btnaceptar" layoutX="288.0" layoutY="152.0" mnemonicParsing="false" onAction="#click" prefHeight="25.0" prefWidth="79.0" text="Aceptar" />
+   </children>
+</AnchorPane>
