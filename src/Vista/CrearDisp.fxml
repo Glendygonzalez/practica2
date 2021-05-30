@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.CrearDispControl">
+   <children>
+      <Label layoutX="34.0" layoutY="26.0" prefHeight="47.0" prefWidth="258.0" text="Crear Dispositivo">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="94.0" text="Seleccione dispositivo que desea crear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="op_disp" layoutX="292.0" layoutY="92.0" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="34.0" layoutY="141.0" text="Correo Electronico ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="183.0" text="Nombre del Dispositivo " />
+      <Label layoutX="41.0" layoutY="221.0" text="Visible " />
+      <Label layoutX="32.0" layoutY="259.0" text="Encendido" />
+      <TextField fx:id="txt_correo" layoutX="188.0" layoutY="138.0" prefHeight="25.0" prefWidth="244.0" />
+      <TextField fx:id="tx_nombre" layoutX="188.0" layoutY="179.0" prefHeight="25.0" prefWidth="244.0" />
+      <CheckBox fx:id="chec_visible" layoutX="127.0" layoutY="221.0" mnemonicParsing="false" />
+      <CheckBox fx:id="chec_encendido" layoutX="127.0" layoutY="259.0" mnemonicParsing="false" />
+      <Label layoutX="31.0" layoutY="310.0" text="Numero de Telefono " />
+      <TextField fx:id="txt_numero" layoutX="198.0" layoutY="306.0" prefHeight="25.0" prefWidth="314.0" />
+      <Button fx:id="btn_guardar" layoutX="99.0" layoutY="355.0" mnemonicParsing="false" onAction="#Guardar" text="Guardar " />
+      <Button fx:id="btn_cancelar" layoutX="266.0" layoutY="355.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+   </children>
+</AnchorPane>

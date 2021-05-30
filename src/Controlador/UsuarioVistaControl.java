@@ -53,9 +53,9 @@ public class UsuarioVistaControl implements Initializable {
              //Codigo para abrir ventanas en modo aleatorio.
              if (contra.equals("admin")){
               try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Menu.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Inicio.fxml"));
                  Parent root = loader.load();
-                 MenuControl controlador = loader.getController();
+                 InicioControl controlador = loader.getController();
                  Scene scene = new Scene (root);
                  Stage stage = new Stage ();
                  stage.initModality(Modality.APPLICATION_MODAL);
@@ -82,6 +82,6 @@ public class UsuarioVistaControl implements Initializable {
          }
          Usuario u = new Usuario (user,contra);
     
-}   
+}  
     
 }

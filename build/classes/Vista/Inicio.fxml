@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="445.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.InicioControl">
+   <children>
+      <TabPane prefHeight="445.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="Dispositivos" text="Dispositivos">
+            <content>
+              <AnchorPane fx:id="tab_dispositivos" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbl_dispositivos" layoutX="14.0" layoutY="46.0" prefHeight="240.0" prefWidth="595.0">
+                          <columns>
+                            <TableColumn fx:id="col_identificador" prefWidth="95.0" text="Identificador" />
+                            <TableColumn fx:id="col_tipo" prefWidth="91.0" text="Tipo" />
+                              <TableColumn fx:id="col_nombre" prefWidth="117.0" text="Nombre" />
+                              <TableColumn fx:id="col_correo" prefWidth="147.0" text="Correo Electronico" />
+                              <TableColumn fx:id="col_estado" prefWidth="144.0" text="Estado" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="23.0" layoutY="3.0" prefHeight="43.0" prefWidth="318.0" text="Gestionar Dispositivos">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_crear" layoutX="23.0" layoutY="297.0" mnemonicParsing="false" onAction="#D_creardispositivos" text="Crear Dispositivos" />
+                        <Button fx:id="btn_eliminar" layoutX="182.0" layoutY="297.0" mnemonicParsing="false" onAction="#D_eliminardis" text="Eliminar Dispositivo" />
+                        <Button fx:id="btn_cargamasiva" layoutX="368.0" layoutY="297.0" mnemonicParsing="false" onAction="#D_cargamasiva" text="Carga Masiva Dispositivos" />
+                        <Button fx:id="btn_administracion" layoutX="354.0" layoutY="366.0" mnemonicParsing="false" onAction="#D_cargamasivadisp" text="Carga Masiva administración Dispositivos" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_acciones" text="Acciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="25.0" prefHeight="36.0" prefWidth="312.0" text="Acciones con Dispositivos">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tbl_acciones" layoutX="14.0" layoutY="61.0" prefHeight="287.0" prefWidth="599.0">
+                          <columns>
+                            <TableColumn fx:id="col_identificador" prefWidth="155.0" text="Identificador" />
+                            <TableColumn fx:id="col_tipo" prefWidth="215.0" text="Tipo" />
+                              <TableColumn fx:id="col_nombre" prefWidth="225.0" text="Nombre" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_cargamasiva" layoutX="422.0" layoutY="360.0" mnemonicParsing="false" onAction="#A_cargamasiva" prefHeight="32.0" prefWidth="154.0" text="Carga Masiva acciones" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_reportes" text="Reportes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="221.0" text="Bitácora">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="63.0" prefHeight="25.0" prefWidth="93.0" text="Fecha Inicio:" />
+                        <Label layoutX="310.0" layoutY="67.0" prefHeight="17.0" prefWidth="94.0" text="Fecha Fin:" />
+                        <Button fx:id="btn_exportar" layoutX="442.0" layoutY="14.0" mnemonicParsing="false" onAction="#R_exportarReporte" text="Exportar Reporte" />
+                        <DatePicker fx:id="dt_fechainicio" layoutX="94.0" layoutY="63.0" promptText="Fecha inicio" />
+                        <DatePicker fx:id="dt_fechafin" layoutX="374.0" layoutY="63.0" promptText="Fecha fin" />
+                        <TableView fx:id="tbl_reportes" layoutX="13.0" layoutY="94.0" prefHeight="315.0" prefWidth="604.0">
+                          <columns>
+                            <TableColumn fx:id="col_Linea" prefWidth="75.0" text="No. Linea" />
+                            <TableColumn fx:id="col_accion" prefWidth="111.0" text="Tipo de Acción " />
+                              <TableColumn fx:id="col_origen" prefWidth="137.0" text="Origen de la Acción" />
+                              <TableColumn fx:id="col_descripcion" prefWidth="103.0" text="Descripción " />
+                              <TableColumn fx:id="col_fecha" prefWidth="66.0" text="Fecha" />
+                              <TableColumn fx:id="col_hora" prefWidth="111.0" text="Hora" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab_usuarios" text="Usuarios">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="260.0" text="Gestionar Usuarios">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <TableView layoutX="14.0" layoutY="54.0" prefHeight="285.0" prefWidth="587.0">
+                          <columns>
+                            <TableColumn fx:id="col_linea" prefWidth="123.0" text="No. Linea" />
+                            <TableColumn fx:id="col_nombre" prefWidth="138.0" text="Nombre" />
+                              <TableColumn fx:id="col_apellido" prefWidth="174.0" text="Apellido" />
+                              <TableColumn fx:id="col_correo" prefWidth="151.0" text="Correo Electronico" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_crear" layoutX="112.0" layoutY="348.0" mnemonicParsing="false" onAction="#U_crear" text="Crear Usuario" />
+                        <Button fx:id="btn_eliminar" layoutX="347.0" layoutY="348.0" mnemonicParsing="false" onAction="#U_eliminar" text="Eliminar Usuario" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
